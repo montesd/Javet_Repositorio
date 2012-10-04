@@ -85,24 +85,137 @@ Public Class LogOnModel
         End Set
     End Property
 End Class
+Public Class UsuarioModel
 
+    Private codUsuarioValue As String
+    Public Property codUsuario() As String
+        Get
+            Return codUsuarioValue
+        End Get
+        Set(ByVal value As String)
+            codUsuarioValue = value
+        End Set
+    End Property
+
+    Private nomUsuarioValue As String
+    Public Property nomUsuario() As String
+        Get
+            Return nomUsuarioValue
+        End Get
+        Set(ByVal value As String)
+            nomUsuarioValue = value
+        End Set
+    End Property
+
+
+    Private claveValue As String
+    Public Property Clave() As String
+        Get
+            Return claveValue
+        End Get
+        Set(ByVal value As String)
+            claveValue = value
+        End Set
+    End Property
+
+
+    Private fechaIngresoValue As DateTime
+    Public Property FechaIngreso() As DateTime
+        Get
+            Return fechaIngresoValue
+        End Get
+        Set(ByVal value As DateTime)
+            fechaIngresoValue = value
+        End Set
+    End Property
+
+    Private fechaInicioValue As DateTime
+    Public Property fechaInicio() As DateTime
+        Get
+            Return fechaInicioValue
+        End Get
+        Set(ByVal value As DateTime)
+            fechaInicioValue = value
+        End Set
+    End Property
+
+
+    Private fechaTerminoValue As DateTime
+    Public Property FechaTermino() As DateTime
+        Get
+            Return fechaTerminoValue
+        End Get
+        Set(ByVal value As DateTime)
+            fechaTerminoValue = value
+        End Set
+    End Property
+
+    Private estadoUsuarioValue As Integer
+    Public Property estadoUsuario() As Integer
+        Get
+            Return estadoUsuarioValue
+        End Get
+        Set(ByVal value As Integer)
+            estadoUsuarioValue = value
+        End Set
+    End Property
+
+
+    Private idTipoValue As Integer
+    Public Property idTipo() As Integer
+        Get
+            Return idTipoValue
+        End Get
+        Set(ByVal value As Integer)
+            idTipoValue = value
+        End Set
+    End Property
+
+
+    Private codPersonalValue As Integer
+    Public Property codPersonal() As Integer
+        Get
+            Return codPersonalValue
+        End Get
+        Set(ByVal value As Integer)
+            codPersonalValue = value
+        End Set
+    End Property
+
+
+    Private computerNameValue As String
+    Public Property computerName() As String
+        Get
+            Return computerNameValue
+        End Get
+        Set(ByVal value As String)
+            computerNameValue = value
+        End Set
+    End Property
+
+End Class
 <PropertiesMustMatch("Password", "ConfirmPassword", ErrorMessage:="La contraseña y la contraseña de confirmación no coinciden.")> _
 Public Class RegisterModel
-    Private userNameValue As String
-    Private passwordValue As String
+    Private codUsuarioValue As String
+    Private claveValue As String
     Private confirmPasswordValue As String
     Private emailValue As String
 
+
+
+
     <Required()> _
     <DisplayName("Nombre de usuario")> _
-    Public Property UserName() As String
+    Public Property codUsuario() As String
         Get
-            Return userNameValue
+            Return codUsuarioValue
         End Get
         Set(ByVal value As String)
-            userNameValue = value
+            codUsuarioValue = value
         End Set
     End Property
+
+    
 
     <Required()> _
     <DataType(DataType.EmailAddress)> _
@@ -120,12 +233,12 @@ Public Class RegisterModel
     <ValidatePasswordLength()> _
     <DataType(DataType.Password)> _
     <DisplayName("Contraseña")> _
-    Public Property Password() As String
+    Public Property Clave() As String
         Get
-            Return passwordValue
+            Return claveValue
         End Get
         Set(ByVal value As String)
-            passwordValue = value
+            claveValue = value
         End Set
     End Property
 
@@ -140,6 +253,12 @@ Public Class RegisterModel
             confirmPasswordValue = value
         End Set
     End Property
+
+
+
+
+
+
 End Class
 #End Region
 
@@ -152,7 +271,7 @@ End Class
 Public Interface IMembershipService
     ReadOnly Property MinPasswordLength() As Integer
 
-    Function ValidateUser(ByVal userName As String, ByVal password As String) As Boolean
+    Function ValidateUser(ByVal userName As String, ByVal password As String, ByRef NomUsuario As String) As Boolean
     Function CreateUser(ByVal userName As String, ByVal password As String, ByVal email As String) As MembershipCreateStatus
     Function ChangePassword(ByVal userName As String, ByVal oldPassword As String, ByVal newPassword As String) As Boolean
 End Interface
@@ -176,11 +295,17 @@ Public Class AccountMembershipService
         End Get
     End Property
 
-    Public Function ValidateUser(ByVal userName As String, ByVal password As String) As Boolean Implements IMembershipService.ValidateUser
+    Public Function ValidateUser(ByVal userName As String, ByVal password As String, ByRef nombreUsuario As String) As Boolean Implements IMembershipService.ValidateUser
         If String.IsNullOrEmpty(userName) Then Throw New ArgumentException("El valor no puede ser NULL ni estar vacío.", "userName")
         If String.IsNullOrEmpty(password) Then Throw New ArgumentException("El valor no puede ser NULL ni estar vacío.", "password")
-
-        Return _provider.ValidateUser(userName, password)
+        Dim usuarioLogic As New Inmobiliaria.MVC.UsuarioLogic
+        Dim usuarioModel As New UsuarioModel
+        usuarioModel.codUsuario = userName
+        usuarioModel.Clave = password
+        'Return _provider.ValidateUser(userName, password)
+        Dim retorno As Boolean=usuarioLogic.ValidaUsuario(usuarioModel)
+        nombreUsuario = usuarioModel.nomUsuario
+        Return retorno
     End Function
 
     Public Function CreateUser(ByVal userName As String, ByVal password As String, ByVal email As String) As MembershipCreateStatus Implements IMembershipService.CreateUser

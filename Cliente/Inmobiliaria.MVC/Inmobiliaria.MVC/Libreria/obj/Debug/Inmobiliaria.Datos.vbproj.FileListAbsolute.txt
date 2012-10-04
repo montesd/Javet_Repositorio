@@ -1,0 +1,10 @@
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\Resources.resources
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\ResGen.read.1.tlog
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\ResGen.write.1.tlog
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\Libreria.dll
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\Libreria.xml
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\obj\Debug\Libreria.pdb
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\bin\Debug\Libreria.dll
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\bin\Debug\Libreria.pdb
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\Libreria\bin\Debug\Libreria.xml

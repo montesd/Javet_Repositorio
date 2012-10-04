@@ -12,4 +12,9 @@ Public Class HomeController
         Return View()
     End Function
 
+    Function Procesos() As ActionResult
+        ViewData("Titulo") = "Estas en la pagina de Procesos"
+        Return View()
+    End Function
+
 End Class

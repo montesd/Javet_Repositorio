@@ -1,4 +1,5 @@
-﻿<%@ Page Language="VB" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage(Of Inmobiliaria.MVC.RegisterModel)" %>
+﻿<%@ Page Language="VB" MasterPageFile="~/Views/Shared/Site.Master" 
+Inherits="System.Web.Mvc.ViewPage(Of Inmobiliaria.MVC.RegisterModel)" %>
 
 <asp:Content ID="registerTitle" ContentPlaceHolderID="TitleContent" runat="server"> Registrarse </asp:Content>
 
@@ -18,11 +19,11 @@
                 <legend>Información de la cuenta</legend>
                 
                 <div class="editor-label">
-                    <%= Html.LabelFor(Function(m) m.UserName) %>
+                    <%= Html.LabelFor(Function(m) m.codUsuario)%>
                 </div>
                 <div class="editor-field">
-                    <%= Html.TextBoxFor(Function(m) m.UserName) %>
-                    <%= Html.ValidationMessageFor(Function(m) m.UserName) %>
+                    <%= Html.TextBoxFor(Function(m) m.codUsuario)%>
+                    <%= Html.ValidationMessageFor(Function(m) m.codUsuario) %>
                 </div>
                 
                 <div class="editor-label">
@@ -34,11 +35,11 @@
                 </div>
                 
                 <div class="editor-label">
-                    <%= Html.LabelFor(Function(m) m.Password) %>
+                    <%= Html.LabelFor(Function(m) m.Clave)%>
                 </div>
                 <div class="editor-field">
-                    <%= Html.PasswordFor(Function(m) m.Password) %>
-                    <%= Html.ValidationMessageFor(Function(m) m.Password) %>
+                    <%= Html.PasswordFor(Function(m) m.Clave)%>
+                    <%= Html.ValidationMessageFor(Function(m) m.Clave)%>
                 </div>
                 
                 <div class="editor-label">
@@ -47,6 +48,7 @@
                 <div class="editor-field">
                     <%= Html.PasswordFor(Function(m) m.ConfirmPassword) %>
                     <%= Html.ValidationMessageFor(Function(m) m.ConfirmPassword) %>
+                    
                 </div>
                 
                 <p>

@@ -45,9 +45,11 @@ Public Class AccountController
     <HttpPost()> _
     Public Function LogOn(ByVal model As LogOnModel, ByVal returnUrl As String) As ActionResult
         If ModelState.IsValid Then
-            If MembershipService.ValidateUser(model.UserName, model.Password) Then
+            Dim nombreUsuario As String
+            If MembershipService.ValidateUser(model.UserName, model.Password, nombreUsuario) Then
                 FormsService.SignIn(model.UserName, model.RememberMe)
                 If Not String.IsNullOrEmpty(returnUrl) Then
+                    Session("NombreUsuario") = nombreUsuario
                     Return Redirect(returnUrl)
                 Else
                     Return RedirectToAction("Index", "Home")
@@ -84,10 +86,10 @@ Public Class AccountController
     Public Function Register(ByVal model As RegisterModel) As ActionResult
         If ModelState.IsValid Then
             ' Intento de registrar al usuario
-            Dim createStatus As MembershipCreateStatus = MembershipService.CreateUser(model.UserName, model.Password, model.Email)
+            Dim createStatus As MembershipCreateStatus = MembershipService.CreateUser(model.codUsuario, model.Clave, model.Email)
 
             If createStatus = MembershipCreateStatus.Success Then
-                FormsService.SignIn(model.UserName, False)
+                FormsService.SignIn(model.codUsuario, False)
                 Return RedirectToAction("Index", "Home")
             Else
                 ModelState.AddModelError("", AccountValidation.ErrorCodeToString(createStatus))

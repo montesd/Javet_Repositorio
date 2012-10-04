@@ -1,4 +1,5 @@
-﻿<%@ Page Language="VB" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage(Of Inmobiliaria.MVC.ChangePasswordModel)" %>
+﻿<%@ Page Language="VB" MasterPageFile="~/Views/Shared/Site.Master"
+ Inherits="System.Web.Mvc.ViewPage(Of Inmobiliaria.MVC.ChangePasswordModel)" %>
 
 <asp:Content ID="changePasswordTitle" ContentPlaceHolderID="TitleContent" runat="server"> Cambiar contraseña </asp:Content>
 
