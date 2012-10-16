@@ -111,6 +111,7 @@ Public Class DistritoModel
 
 
 End Class
+
 Public Class TipoProductoModel
 
     Private idTipoValue As Integer

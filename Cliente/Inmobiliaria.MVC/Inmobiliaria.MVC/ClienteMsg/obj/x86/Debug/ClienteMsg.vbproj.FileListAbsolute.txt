@@ -1,0 +1,10 @@
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\bin\Debug\ClienteMsg.exe
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\bin\Debug\ClienteMsg.pdb
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\bin\Debug\ClienteMsg.xml
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ClienteMsg.Resources.resources
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ClienteMsg.exe
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ClienteMsg.xml
+C:\Users\David\Documents\GitHub\Javet_Repositorio\Cliente\Inmobiliaria.MVC\Inmobiliaria.MVC\ClienteMsg\obj\x86\Debug\ClienteMsg.pdb

@@ -96,11 +96,17 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CotizacionController.vb" />
+    <Compile Include="Controllers\MaestroController.vb" />
+    <Compile Include="Models\Clases\Cliente.vb" />
+    <Compile Include="Models\Clases\Contrato.vb" />
+    <Compile Include="Models\Clases\Cotizacion.vb" />
     <Compile Include="Models\Clases\Maestros.vb" />
+    <Compile Include="Models\Clases\Producto.vb" />
     <Compile Include="Models\Clases\Proyecto.vb" />
     <Compile Include="Models\Clases\Usuario.vb" />
     <Compile Include="Controllers\ProyectoController.vb" />
-    <Compile Include="Controllers\SolicitudController.vb" />
+    <Compile Include="Controllers\ContratoController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -108,9 +114,11 @@
     <Compile Include="Helper\ConexionDAO.vb" />
     <Compile Include="Helper\SQLHelper.vb" />
     <Compile Include="Models\ClienteModels.vb" />
+    <Compile Include="Models\CotizacionModels.vb" />
     <Compile Include="Models\MaestroModels.vb" />
+    <Compile Include="Models\ProductoModels.vb" />
     <Compile Include="Models\ProyectoModels.vb" />
-    <Compile Include="Models\SolicitudModels.vb" />
+    <Compile Include="Models\ContratoModels.vb" />
     <Compile Include="Modulo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -130,6 +138,8 @@
     <Compile Include="Controllers\AccountController.vb" />
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Models\AccountModels.vb" />
+    <Compile Include="ViewModels\ListaContratosViewModels.vb" />
+    <Compile Include="ViewModels\IndexCotizacionViewModels.vb" />
     <Compile Include="ViewModels\IndexProyectoViewModels.vb" />
     <Compile Include="ViewModels\IndexSolicitudViewModels.vb" />
   </ItemGroup>
@@ -160,6 +170,7 @@
     <Content Include="Content\css\Slider.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\css\ui.jqgrid.css" />
+    <Content Include="Content\img\icons\Add-32.png" />
     <Content Include="Content\img\slide_1.jpg" />
     <Content Include="Content\img\slide_2.jpg" />
     <Content Include="Content\img\slide_3.jpg" />
@@ -501,8 +512,11 @@
     <Content Include="Content\themes\blue\img\cp_logo_login.png" />
     <Content Include="Content\themes\blue\styles.css" />
     <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Contrato\Lista.aspx" />
+    <Content Include="Views\Cotizacion\Index.aspx" />
     <Content Include="Views\Proyecto\Index.aspx" />
-    <Content Include="Views\Solicitud\Index.aspx" />
+    <Content Include="Views\Contrato\EnvioPrueba.aspx" />
+    <Content Include="Views\Contrato\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

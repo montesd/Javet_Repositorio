@@ -81,7 +81,10 @@
             </li>
             <li><a class="collapsed heading">Procesos</a>
                 <ul class="navigation">
-                    <li><%= Html.ActionLink("Registrar Solicitud", "Index", "Solicitud")%></li>
+                    <li><%= Html.ActionLink("Registrar Cotizacion", "Index", "Cotizacion")%></li>
+                    <li><%= Html.ActionLink("Registrar Contrato", "Index", "Contrato")%></li>
+                    <li><%= Html.ActionLink("Listar Contrato", "Lista", "Contrato")%></li>
+                    
                     
                 </ul>
             </li>            

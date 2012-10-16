@@ -13,11 +13,11 @@
             Return View(vista)
         End Function
 
-        <HttpGet()> _
-        Public Function GetProyectosDistrito() As JsonResult
+        <HttpPost()> _
+        Public Function GetProyectosDistrito(ByVal idDistrito As String) As ActionResult
             Dim proyectoL As New ProyectoLogic
             Dim var As New JsonResult
-            var = Json(proyectoL.GetProyectos().ToArray)
+            var = Json(proyectoL.GetProyectos(Convert.ToInt32(idDistrito)), JsonRequestBehavior.AllowGet)
             Return var
         End Function
 
@@ -27,6 +27,7 @@
             Dim retorno() As ProyectoModel = proyectoL.GetProyectos().ToArray
             Return retorno
         End Function
+
 
     End Class
 

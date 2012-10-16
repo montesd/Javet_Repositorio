@@ -2,8 +2,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Listado de Proyectos
-</asp:Content>
+	Listado de Proyectos</asp:Content>
 <asp:Content ID="Header" ContentPlaceHolderID="HeaderContent" runat="server">
 
 
@@ -17,58 +16,7 @@
     <script src="../../Content/plugins/jquery.tablednd.js" type="text/javascript"></script>
 
 
-    
-
-    <script type="text/javascript">
-        var dataJ;
-
-
-
-
-        $(document).ready(function () {
-       
-            CargarGrilla();
-        });
-
-        function CargarGrilla() {
-            
-            $("#lData").jqGrid({
-                data: '<%= Url.Action("GetProyectosDistrito") %>',
-                datatype: 'json',
-                mtype: 'GET',
-                rowNum: 20,
-                rowList: [10, 20, 30],
-                colNames: ['Codigo de Proyecto', 'Proyecto',  'Urbanizacion'],
-                colModel: [
-                { name: 'idProyectoValue', index: 'idProyectoValue' },
-				{ name: 'proyectoValue', index: 'proyectoValue' },
-			    { name: 'urbanizacionValue', index: 'urbanizacionValue' }
-                ],
-                imgpath: '../../Content/img',
-                multiselect: false,
-                pager: "#plData",
-                viewrecords: true,
-                height: 450,
-                width: "100%",
-                hidegrid: false,
-                caption: "Listado de Proyectos"
-            });
-
-            $("#lData").jqGrid('setGridWidth', $("#contenedor").width(), true);
-            $("#lData").jqGrid('navGrid', '#plData', { edit: false, add: false, del: false }, {}, {}, {}, { multipleSearch: true, multipleGroup: false });
-
-
-            
-        }
-
-        function RefrescaGrilla() {
-            $('#lData').jqGrid('clearGridData');
-            $('#lData').jqGrid('setGridParam', { url: "/Proyecto/GetProyectosDistrito" }).trigger('reloadGrid');
-        }
-
-
-
-    </script>
+  
 
 </asp:Content>
 
@@ -78,12 +26,7 @@
     
 
     <h2>Proyectos</h2>
-    <input id="Button1" type="button" value="Refrescar" onclick="RefrescaGrilla();" />
-    <div id="contenedor" style="width:100%;">
-     <table id="lData" width="95%"></table>
-           <div id="plData"></div>
-    </div>
-    
+       
     <div class="contentbox">
             	<table width="100%">
                 	<thead>
